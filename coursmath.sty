@@ -1,0 +1,122 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{coursmath}[2020/12/30 Cours de Math]
+
+\RequirePackage{gaubil-math}
+\RequirePackage{gaubil-cmos}
+%\RequirePackage{glossaries}
+
+\setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
+
+\newcounter{ndefinitions}
+\newcounter{nexemples}
+\newcounter{nexercices}
+\newcounter{nastuces}
+\newcounter{nproprietes}
+
+\newenvironment{exemple}{
+	\stepcounter{nexemples}
+	\color{gray} \noindent{\it Exemple \thenexemples:}
+}
+
+\newenvironment{exercicefr}{
+	\stepcounter{nexercices}
+	\noindent{\bf Exercice \thenexercices.}
+}
+
+\newenvironment{definitionfr}{
+	\stepcounter{ndefinitions}
+	\noindent {\bf Définition \thendefinitions.}
+}
+
+\newenvironment{astuce}{
+	\stepcounter{nastuces}
+	\noindent {\it Astuce \thenastuces.}
+}
+
+\newenvironment{propriete}{
+	\stepcounter{nproprietes}
+	\noindent {\bf Propriété \thenproprietes.}
+}
+
+\newenvironment{exerciceenum}{
+    \begin{multicols}{2}
+    \begin{enumerate}[start=1, label={\Alph* = }]
+}{
+    \end{enumerate}
+    \end{multicols}
+}
+
+\newenvironment{exerciceenumnoeq}{
+    \begin{multicols}{2}
+    \begin{enumerate}[start=1, label={\Alph*. }]
+}{
+    \end{enumerate}
+    \end{multicols}
+}
+
+
+% Random numbers generator
+\newcommand{\randomint}{\pgfmathparse{floor(rand * 100)} \pgfmathresult}
+\newcommand{\randomfrac}{\pgfmathparse{floor(rand * 1000) / 10} \pgfmathresult}
+
+\newcommand{\randomintpfg}{floor(rand * 100)}
+\newcommand{\randomfracpfg}{floor(rand * 1000) / 10}
+
+
+\newcommand{\initvariables}{
+    \pgfmathsetmacro{\A}{\randomintpfg}
+    \pgfmathsetmacro{\B}{\randomintpfg}
+    \pgfmathsetmacro{\C}{\randomintpfg}
+    \pgfmathsetmacro{\D}{\randomintpfg}
+}
+
+\newcommand{\equationpremierdegree}{
+    \initvariables
+    \pgfmathprintnumber[fixed, precision=1]{\A}$\ +$
+    \pgfmathprintnumber[fixed, precision=1]{\B}$x = $
+    \pgfmathprintnumber[fixed, precision=1]{\C}
+}
+
+\newcommand{\exequationpremierdegree}[1]{
+    \begin{exercicefr}
+        \begin{exerciceenumnoeq}
+            \foreach \i in {1,...,#1}{
+                \item \equationpremierdegree
+            }
+        \end{exerciceenumnoeq}
+    \end{exercicefr}
+}
+
+\newcommand{\equationproduitnul}{
+    \initvariables
+    $($\pgfmathprintnumber[fixed, precision=1]{\A}$x\ +$
+    \pgfmathprintnumber[fixed, precision=1]{\B}$)($
+    \pgfmathprintnumber[fixed, precision=1]{\C}$\ +$
+    \pgfmathprintnumber[fixed, precision=1]{\D}$x)=0$
+}
+
+\newcommand{\exequationproduitnul}[1]{
+    \begin{exercicefr}
+        \begin{exerciceenumnoeq}
+            \foreach \i in {1,...,#1}{
+                \item \equationproduitnul
+            }
+        \end{exerciceenumnoeq}
+    \end{exercicefr}
+}
+
+\newcommand{\fracquestion}[1]{%
+    \foreach \i in {1,...,#1}{%
+      \item $\dfrac{\pgfmathparse{random(10)}\pgfmathresult}{\pgfmathparse{random(20)}\pgfmathresult}$%
+    }
+}
+
+
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\RequirePackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}

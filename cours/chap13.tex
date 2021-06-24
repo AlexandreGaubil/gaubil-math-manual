@@ -1,0 +1,131 @@
+\chapter{Opérations de base}
+
+\section{Introduction}
+
+\begin{definition}
+    Une \emph{opération} est un processus nous permettant d'obtenir un résultat à partir d'un ou plusieurs \emph{opérandes}.
+\end{definition}
+
+\noindent En \emph{arithmétique} (la mathématique qui étudie les nombres), nous avons quatre opérations de base: l'\emph{addition}, la \emph{soustraction}, la \emph{multiplication} et la \emph{division}.
+
+\noindent {\it Note sur la notation:} le symbole $\forall$ signifie ``pour tout''. Le symbole $\exists$ signifie ``il existe''.
+
+\section{Addition et soustraction}
+
+\subsection{Propriété de l'addition}
+
+Les propriétés de l'addition sont:
+\begin{itemize}
+    \item \emph{commutative}: $\forall a,b$, $a+b = b+a$;
+    \item \emph{associative}: $\forall a,b,c$, $(a+b)+c = a+(b+c) = a+b+c$;
+    \item existence d'un \emph{opposé}: $\forall a$, $\exists -a$ tel que $a + (-a) = 0$.
+\end{itemize}
+
+\noindent L'addition possède aussi un \emph{élément neutre} (un élément qui ne change pas l'autre nombre): $\forall a$, $a + 0 = a$.
+
+
+\subsection{Propriété de la soustraction}
+
+La soustraction est:
+\begin{itemize}
+    \item \emph{anticommutative}: $\forall a,b$, $a - b = -(b -a)$;
+    \item pas \emph{associative}: en général, $a-(b-c) \not= (a-b) - c$;
+    \item \emph{involutive}: $\forall a$, $a-a = 0$.
+\end{itemize}
+
+\noindent La soustraction possède un \emph{élément neutre} seulement à droite: $\forall a$, $a-0 = 0$, mais $0-a\not= a$.
+
+
+\subsection{Lien entre addition et soustraction}
+
+On peut considérer la soustraction comme un cas particulier de l'addition. En effet, $\forall a,b$, on a $a-b = a+(-b)$.
+
+
+\section{Multiplication et division}
+
+\subsection{Propriété de la multiplication}
+
+Les propriétés de la multiplication:
+\begin{itemize}
+    \item \emph{associativité}: $\forall a,b,c$, $a\times (b\times c) = (a\times b) \times c$;
+    \item \emph{commutativité}: $\forall a,b$, $a\times b = b \times a$;
+    \item existence d'un \emph{élément neutre}: $\forall a$, $a\times 1 = a$;
+    \item existence d'un \emph{inverse}: $\forall a \not= 0$, $\exists \frac1a$ tel que $a \times \frac1a = 1$;
+    \item existence d'un \emph{élément absorbant}: $\forall a$, $a\times 0 = 0$.
+\end{itemize}
+
+\subsection{Propriété de la division}
+
+Les propriétés de la division:
+\begin{itemize}
+    \item \emph{non-associativité}: $\forall a,b,c$, $a \div (b\div c) \not = (a\div b)\div c$;
+    \item \emph{non-commutativité}: $\forall a,b$, $a \div b \not= b \div a$;
+    \item existence d'un \emph{élément neutre} à droite: $\forall a$, $a \div 1 = a$;
+    \item existence d'un \emph{élément absorbant} à gauche: $\forall a$, $0\div a = 0$.
+\end{itemize}
+
+\subsection{Lien entre multiplication et division}
+
+On peut considérer la division comme un cas particulier de la multiplication. En effet, $a\div b = a \times \dfrac1b$.
+
+\section{Symétrie entre addition et multiplication}
+
+Il y a une certaine forme de symétrie entre l'addition et la multiplication.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|P{3cm}|P{5cm}|P{5cm}|}
+    \hline
+    \textbf{Propriété} & \textbf{Addition} & \textbf{Multiplication} \\ \hline
+    Associativité & $a+(b+c) = (a+b)+c$ & $a\times (b\times c) = (a\times b)\times c$ \\ \hline
+    Commutativité & $a+b = b+a$ & $a\times b = b\times a$ \\ \hline
+    Élément neutre & $a+0 = a$ & $a\times 1 = a$ \\ \hline
+    Opposé / inverse & $a + (-a)  = 0$ & $a\times \frac1a = 1$ \\ \hline
+    Écriture & Somme de $n$ $a$: $a+a+\dots+a = a^n$ & Produit de $n$ $a$: $a\times a \times \dots \times a = a^n$ \\ \hline
+    Opération inverse & Soustraction: $a+(-b) = a-b$ & Division: $a\times \frac1b = a\div b$ \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|P{3cm}|P{5cm}|P{5cm}|}
+    \hline
+    \textbf{Propriété} & \textbf{Soustraction} & \textbf{Division} \\ \hline
+    Non-associativité & $a-(b-c) \not= (a-b)-c$ & $a\div (b\div c) \not= (a\div b)\div c$ \\ \hline
+    Anti-commutativité & $a-b = -(b-a)$ & $a\div b = 1\div (b \div a)$ (si $a\not= 0$) \\ \hline
+    Élément neutre & $a-0 = a$ (à droite seulement: $0-a \not= a$) & $a\div 1 = a$ (à droite seulement: $1\div a \not= a$) \\ \hline
+    Involutive & $a - a  = 0$ & $a\div a = 1$ \\ \hline
+    Opération inverse & Addition: $a-b = a+(-b)$ & Multiplication: $a\div b = a\times \frac1b$ \\ \hline
+    \end{tabular}
+\end{table}
+
+\section{Exposants et racines}
+
+\subsection{Exposants}\label{exposants}
+
+\begin{definitionfr}
+    L'\emph{exponentiation} est une opération, définie de la façon suivante: $a \times a \times \dots \times a = a^n$.
+\end{definitionfr}
+
+\begin{propriete}
+    Les exposants ont les propriétés suivantes:
+    \begin{itemize}
+        \item $a^{b+c} = a^b \times a^c$;
+        \item $(ab)^c = a^c \times b^c$;
+        \item $(a^b)^c = a^{bc}$.
+    \end{itemize}
+\end{propriete}
+
+\begin{exemple}
+    On a: $2^3 = 2\times 2\times 2 = 8$, $2^{4 + 3} = 2^4 \times 2^3 = 16 \times 8 = 128 = 2^7$.
+\end{exemple}
+
+\subsection{Racines}
+
+\begin{definitionfr}
+    La \emph{racine} est l'opération inverse des exposants. On la définie comme suit: $\sqrt[n]{a^n} = a$. $\sqrt[n]{a}$ n'est définit que pour $a\geq 0$.
+\end{definitionfr}
+
+\begin{propriete}
+    Nous avons la propriété suivantes: $\sqrt{a\times b} = \sqrt{a} \times \sqrt{b}$.
+\end{propriete}

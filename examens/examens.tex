@@ -1,0 +1,25 @@
+\documentclass[11pt]{article}
+\usepackage{coursmath}
+
+\newcommand{\examnumber}{1}
+\newcounter{showall}
+\setcounter{showall}{0} % set to 0 to only show one exam
+
+\begin{document}
+
+\selectlanguage{french}
+
+\ifnum \value{showall}<1 {
+    %\edef\FileName{exam\examnumber}%
+    \input{exam\examnumber}%
+} \else {
+    \foreach \c in {1,2,...,99} {%
+        \edef\FileName{exam\c}%
+        \IfFileExists{\FileName}{%
+        \input{\FileName}%
+        }
+    }
+}
+\fi
+
+\end{document}

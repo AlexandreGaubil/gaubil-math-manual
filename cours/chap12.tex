@@ -1,0 +1,209 @@
+\chapter{Calcul Littéral}
+
+\section{Introduction}
+
+En mathématiques, nous n'aimons pas travailler avec des nombres spécifiques. Nous préférerons largement pouvoir trouver des formules qui peuvent marcher pour n'importe quel nombre. Par exemple, la formule de l'aire d'un carré: $\mathcal{A} = l \times l$, avec $l$ étant la longueur d'un côté, est beaucoup plus pratique que de devoir retenir l'aire de tous les carrés possibles. Pour cela, il nous faut définir quelque chose de nouveau: le \emph{calcul littéral}.
+
+Lorsque que nous faisons du calcul littéral, nous n'utilisons pas que des nombres. Nous utilisons également des \emph{inconnues}, soit quelque chose qui peut prendre n'importe quelle valeur. Par exemple, dans la formule de l'aire d'un carré, $l$ et $\mathcal{A}$ sont des inconnues. On représente une inconnue par une lettre.
+
+\noindent \textcolor{red}{{\bf Attention!}} La manière d'écrire une lettre est importante. $l$, $L$, et $\mathcal{L}$ sont toutes des inconnues représentant des nombres différents.
+
+\begin{definitionfr}
+    Une \emph{inconnue} est une lettre qui représente un nombre de valeur inconnue.
+\end{definitionfr}
+\begin{exemple}
+    Dans la formule pour l'aire d'un carré ($\mathcal{A} = l\times l$), $l$, qui représente la longueur d'un côté, est une inconnue.
+\end{exemple}
+
+\begin{definitionfr}
+    Un calcul avec des inconnues est appelé une \emph{expression littérale}.
+\end{definitionfr}
+\begin{exemple}
+    La formule pour l'aire d'un carré est une expression littérale.
+\end{exemple}
+
+\begin{exercicefr}
+    Je cherche une formule pour la longueur suivante:
+
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[thick,-] node[] at (-4.5,-0.25) {$a$} (-5,0) -- (-4,0) ;
+            \draw[thick,-] node[] at (-4.25,0.8) {$b$} (-4,0) -- (-4,1.5) ;
+            \draw[thick,-] node[] at (-2.5,1.25) {$3\times a$} (-4,1.5) -- (-1,1.5) ;
+        \end{tikzpicture}
+    \end{center}
+
+    \noindent Exprime le résultat en fonction de $a$ et $b$.
+\end{exercicefr}
+
+
+\section{Bases du calcul littéral}
+\subsection{Simplification d'écriture}
+
+Les mathématiciens sont paresseux: ils n'aiment pas écrire plus que nécessaire. Ainsi, ils ont trouver des moyens de simplifier l'écriture. Les écritures suivantes sont équivalentes:
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Écriture Longue} & \textbf{Écriture courte} \\ \hline
+    $2 \times a$ & $2a$ \\ \hline
+    $a\times b$ & $ab$ \\ \hline
+    $2\times (a - 4)$ & $2(a-4)$ \\ \hline
+    $3\times 3$ & $3^2$ (se lit ``3 au carré'') \\ \hline
+    $3 \times 3 \times 3$ & $3^3$ (se lit ``3 au cube'') \\ \hline
+    \end{tabular}
+\end{table}
+
+\noindent \textcolor{red}{{\bf Attention!}} On ne peut pas écrire $2\times 3$ sous la forme $23$, pour des raisons évidentes…
+
+\begin{exercicefr}
+    Simplifie les écritures suivantes autant que possible $5\times x \times 3$.
+\end{exercicefr}
+
+
+\subsection{Appliquer une formule}
+
+Pour appliquer une formule, on remplace les inconnues par leur valeur.
+
+\begin{exemple}
+    Pour appliquer la formule de l'aire d'un carré ($\scr{A} = l^2$) pour un carré de côté de longueur 5, on remplace $l$ par 5. On a alors $\scr{A} = l^2 = 5^2 = 5\times 5 = 25$.
+\end{exemple}
+
+\section{Distributivité et factorisation}
+
+\subsection{Distributivité simple}
+
+La multiplication est \emph{distributive} par rapport à l'addition. Qu'est-ce que cela signifie? Pour trois nombres $a$, $b$ et $c$, on a:
+
+\begin{equation}
+    a(b+c) = ab + ac
+\end{equation}
+ou
+\begin{equation}
+    a(b-c) = ab - ac
+\end{equation}
+
+\begin{exemple}
+    $2(4+5) = 2 \times 9 = 18$ et $2\times 4 + 2\times 5 = 8 + 10 = 18$. Donc $2(4+5) = 2\times 4 + 2\times 5$.
+\end{exemple}
+
+\begin{definitionfr}
+    \emph{Factoriser} est l'inverse de la distribution: on trouve un \emph{facteur} (nombre(s) par lequel tous les termes d'une somme sont multipliés) commun à plusieurs termes (par exemple, $a$ dans $ab + ac + ad + \dots + az$) et on le retire de tous les termes, pour obtenir $a(b+c+d+\dots+z)$.
+\end{definitionfr}
+
+\begin{exemple}
+    Factoriser $2x+4y+8$ donne $2(x+2y+4)$, car $2x+4y+8 = 2\times x + 2\times 2y + 2\times 4$.
+\end{exemple}
+
+\subsection{Distributivité double}
+
+En appliquant la formule de distributivité simple deux fois, nous avons, pour tout nombres $a$, $b$, $c$ et $d$:
+\[
+    (a+b)(c+d) = ac + ad + bc + bd
+\]
+
+\section{Équations}
+
+\begin{definitionfr}
+    Une \emph{équation} est une égalité à trous où les trous sont des inconnues.
+\end{definitionfr}
+\begin{exemple}
+    On peut représenter $3 - ..... = 2$ par $3 - x = 2$.
+\end{exemple}
+
+\begin{definitionfr}
+    Une équation est composé de deux \emph{membres}, un de chaque côté du signe $=$.
+\end{definitionfr}
+\begin{exemple}
+    $3-x=2$ a deux membres: $3-x$ et $2$.
+\end{exemple}
+
+\subsection{Tester une égalité}
+
+Pour vérifier si une égalité est vraie pour certaines valeurs, calcule chaque membre de l'équation séparément pour la valeur donnée. Puis, on compare les deux résultats. Si les deux résultats sont égaux, on dit que cette valeur est une \emph{solution} du système ou de l'équation.
+
+\begin{exemple}
+    Pour vérifier si $x=2$ est une solution du système $2 - x = x - x$, on calcule chaque membre séparément. Pour le premier, on obtient $2 - 2 = 0$ et pour le second, $2 - 2 = 0$. Donc oui, $x = 2$ est une solution du système.
+\end{exemple}
+
+\begin{exercicefr}
+    Vérifie si $x = 0$ et $x = 1$ sont des solutions du système $1.5x - 4 = -4$.
+\end{exercicefr}
+
+\subsection{Opérations sur une équations}
+
+On peut faire certaines opérations sur une équation. Pour que cela soit valide, on doit faire la même opération sur les deux membres. Les opérations qui sont valides sont:
+\begin{itemize}
+    \item ajouter quelque chose à chaque membre,
+    \item soustraire quelque chose à chaque membre,
+    \item multiplier chaque membre par quelque chose,
+    \item diviser chaque membre par quelque chose.
+\end{itemize}
+
+Lorsque nous effectuons une de ces opérations, nous ne changeons pas l'équation: nous disons que ces équations sont \emph{équivalentes}.
+
+\begin{exemple}
+    Les équations suivantes sont équivalentes:
+    \begin{alignat*}{3}
+        x & = 1 &\\
+        x - 2 & = -1& \text{  (soustraire 2 à chaque membre)}\\
+        x + 2 & = 3& \text{ (ajouter 2 à chaque membre)}\\
+        2x & = 2& \hspace{5mm}\text{ (multiplier chaque membre par 2)}\\
+        \frac{x}2 & = \frac12& \text{ (diviser chaque membre par 2)}\\
+    \end{alignat*}
+\end{exemple}
+
+\begin{exercicefr}
+    Les équations suivantes sont-elles équivalentes?
+    \begin{exerciceenumnoeq}
+        \item $x - 1 = 0$
+        \item $x = 1$
+        \item $x^2 - 1 = 0$
+        \item $2x - 2 = 0$
+        \item $x^2 - x = 0$
+    \end{exerciceenumnoeq}
+\end{exercicefr}
+
+
+\subsection{Résoudre une équation}
+
+Résoudre une équation revient à trouver les valeurs des inconnues pour que l'égalité soit vraie. Pour ce faire, nous devons utiliser les opérations vu dans la section précédente pour \emph{isoler} l'inconnue dans un membre (n'avoir que l'inconnue dans un membre). La valeur de l'inconnue est alors dans l'autre membre.
+
+\begin{exemple}
+    Pour résoudre l'équation $x - 3 = 5$, on fait:
+    \begin{alignat*}{3}
+        & x - 3 = 5&\\
+        \iff & x - 3 + 3 = 5 + 3 & \hspace{5mm} \text{ (soustraire 3 à chaque membre)}\\
+        \iff & x = 8 &
+    \end{alignat*}
+
+    Donc la solution du système est $x = 8$.
+\end{exemple}
+
+\begin{exemple}
+    Pour résoudre l'équation $\dfrac{x}{2} = 8$, on fait:
+    \begin{alignat*}{3}
+        & \dfrac{x}{2} = 8&\\
+        \iff & \dfrac{x}{2} \times 2 = 8 \times 2& \hspace{5mm} \text{(multiplier chaque membre par 2)}\\
+        \iff & x = 16&
+    \end{alignat*}
+
+    Donc la solution du système est $x = 16$.
+\end{exemple}
+
+\begin{astuce}
+    Pour vérifier la solution d'une équation, on peut tester l'égalité pour la valeur de la solution. Si l'égalité tiens, notre solution est bonne. Sinon, notre solution n'est pas bonne.
+\end{astuce}
+
+\begin{exercicefr}
+    Résout les équations suivantes: $2 + x = 7$, $9x = 8$, $2x - 1 = 6$, $3 = x$. Vérifie tes solutions après les avoir trouvées.
+\end{exercicefr}
+
+
+\subsection{Équations produit-nul}
+
+Quel type de produit donne 0? Lorsque nous avons un produit de plusieurs nombres dont le résultat est nul, un de ces nombres doit être nul. Par exemple, $3a = 0$ implique que $a=0$. On a alors la propriété suivante:
+
+\begin{propriete}
+    Si on a $ab = 0$, les solutions sont $a = 0$ ou $b = 0$.
+\end{propriete}
