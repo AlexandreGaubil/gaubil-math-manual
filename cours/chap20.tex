@@ -1,0 +1,71 @@
+\chapter{Ensemble}
+
+\section{Introduction}
+
+Un ensemble est un objet mathématique qui contient d'autres objets mathématiques distincts. Le plus souvent, quand nous parlons d'ensembles, nous parlons d'ensembles de nombres. Nous allons nous concentrer sur ce type d'ensemble.
+
+\begin{definition}
+    Un \emph{ensemble} est une collection d'objets distincts.
+\end{definition}
+
+\begin{definition}
+    Un \emph{ensemble de nombre} (souvent appelé ensemble par abus de language) est une collection de nombres distincts. Nous les notons à l'aide d'accolades entre lesquelles nous listons tous les objets que l'ensemble contiens.
+\end{definition}
+
+\begin{exemple}
+    $\{1, 2, 6\}$ est un ensemble contenant les nombres 1, 2 et 6.
+\end{exemple}
+
+\begin{exercice}
+    Écrit l'ensemble contenant les nombres $-8$, 0, 10 et $-4$.
+\end{exercice}
+
+\begin{propriete}
+    Voici quelques propriétés de base pour les ensembles.
+    \begin{enumerate}
+        \item Nous notons qu'un objet $a$ est dans l'ensemble $A$ comme suit: $a\in A$. Nous notons qu'un objet $a$ n'est pas dans l'ensemble $A$ comme suit: $a\not\in A$.
+        \item Nous pouvons noter un ensemble de manière explicite (lister tous les éléments contenus dans l'ensemble) ou de manière formelle (en donnant une règle que tous les éléments dans l'ensemble doivent respecter). Pour noter un ensemble de manière formelle, on fait comme suit: $\{x \mid~\text{\ttfamily <~règle que $x$ doit suivre~>}\}$.
+        \item Deux ensembles sont égaux si, et seulement si, ils contiennent les mêmes nombres. En language mathématique, cela donne: $A = B \iff (a\in A \implies a\in B) \wedge (b\in B \implies b\in B)$.
+        \item L'ordre des objets dans un ensemble n'importe pas. En language mathématique, cela donne: $\{a, \dots, e, f, \dots, z\} = \{a, \dots, f, e, \dots, z\}$.
+    \end{enumerate}
+\end{propriete}
+
+\begin{definition}
+    L'ensemble ne contenant rien est appelé \emph{l'ensemble vide}. Il est noté $\emptyset$, ou plus rarement $\{\}$. En notation mathématique, il définit comme suit: $\forall a, a\not\in \emptyset$.
+\end{definition}
+
+\section{Opérations de base}
+
+Les opérations avec lesquelles nous sommes familier ne fonctionnent pas sur les ensembles. Nous ne pouvons pas additionner ou multiplier deux ensembles. Cependant, nous avons de nouvelles opérations qui fonctionnent sur les ensembles (et seulement sur les ensembles).
+
+\begin{definition}
+    Une \emph{union} (notée $\cup$) est une opération binaire (sur deux ensembles) qui créé un nouvel ensemble contenant tous les éléments de ces deux ensembles. En notation mathématique: $A \cup B = \{x \mid (x\in A) \vee (x\in B)\}$.
+\end{definition}
+
+\begin{exemple}
+    $\{1, 2, 5\} \cup \{-9, 0, 5\} = \{-9, 0, 1, 2, 5\}$.
+\end{exemple}
+
+\begin{definition}
+    Une \emph{intersection} (notée $\cap$) est une opération binaire qui créé un nouvel ensemble contenant uniquement les objets présent dans les deux ensembles. En notation mathématique: $A \cap B = \{x\mid (x\in A) \wedge (x\in B) \}$.
+\end{definition}
+
+\begin{exemple}
+    $\{1, 2, 5\} \cap \{-9, 0, 5\} = \{5\}$ et $\{1, 2, 5\} \cap \{-9, 0\} = \emptyset$.
+\end{exemple}
+
+\begin{exercice}
+    Donne l'union et l'intersection des paires d'ensembles suivants: $\{9, 5, 0\}$ et $\{9, 10, 7\}$, $\{\pi, 8, 15.3\}$ et $\{\phi, 3.14, -1\}$.
+\end{exercice}
+
+\begin{definition}
+    Soit $A$ et $B$ deux ensembles. Le \emph{complémentaire} de $A$ par rapport à $B$ est l'ensemble des élements présent dans $A$ mais absent de $B$. On le note $A\setminus B$.
+\end{definition}
+
+\begin{exemple}
+    $\{1, 2, 3, 4\} \setminus \{1, 3, 5\} = \{2, 4\}$.
+\end{exemple}
+
+\begin{exercice}
+    Donne le complément de $\{4, 5, 2, -10\}$ par rapport à $\{9, 2\}$. Quel est le résultat de $\{8, 9.9\} \setminus \{7, 8\}$?
+\end{exercice}

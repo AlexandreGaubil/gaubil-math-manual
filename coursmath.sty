@@ -1,9 +1,66 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{coursmath}[2020/12/30 Cours de Math]
 
-\RequirePackage{gaubil-math}
-\RequirePackage{gaubil-cmos}
+\RequirePackage[french]{babel}
+\RequirePackage[T1]{fontenc}
+
+\RequirePackage{multicol}
+\RequirePackage{float}
+\RequirePackage{booktabs}
+\RequirePackage{textcomp, gensymb, multirow}
+\RequirePackage{enumitem}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{setspace, fullpage, enumitem, tabularx, lmodern, xcolor}
+\RequirePackage{amsfonts, amssymb, latexsym, amsthm, mathrsfs, amsmath}
 %\RequirePackage{glossaries}
+\RequirePackage{bookmark} % To avoid reruning latexmk many times
+
+
+% ----- GRAPHICS ------
+\RequirePackage{tikz}
+\usetikzlibrary{tikzmark,arrows,calc}
+
+\RequirePackage{graphicx}
+\graphicspath{ {/Users/alexandregaubil/Desktop/} }
+\newcommand{\addimage}[2]{
+    \begin{center}
+        \includegraphics[#2]{#1}
+    \end{center}
+}
+
+\RequirePackage{comment, xspace}
+\graphicspath{ {/Users/alexandregaubil/Desktop/} }
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\RequirePackage{listings}
+\lstdefinelanguage{pseudocode}{
+    keywords = {for,procedure,else,if,return,then,do}
+}
+\lstset{
+  basicstyle=\ttfamily,
+  mathescape,
+  numbers=left,
+  stepnumber=1,
+  breaklines=true,
+  breakatwhitespace=false,
+  showstringspaces=false,
+  tabsize=1,
+  language=pseudocode,
+  escapechar=|,
+  xleftmargin=5.0ex,
+  numberstyle=\small\fontfamily{cmtt}\selectfont,
+}
+
+\RequirePackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\setlength{\parindent}{0em}
+
+\newcommand{\false}{{\it False. }}
+\newcommand{\true}{{\it True. }}
+
+\newcommand{\setsection}[1]{\setcounter{section}{#1}}
+\newcommand{\settheorem}[1]{\setcounter{theorem}{#1}}
 
 \setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
 
@@ -12,18 +69,28 @@
 \newcounter{nexercices}
 \newcounter{nastuces}
 \newcounter{nproprietes}
+\newcounter{ndefis}
+
+\newcommand{\resetcounters}{
+    \setcounter{ndefinitions}{0}
+    \setcounter{nexemples}{0}
+    \setcounter{nexercices}{0}
+    \setcounter{nastuces}{0}
+    \setcounter{nproprietes}{0}
+    \setcounter{ndefis}{0}
+}
 
 \newenvironment{exemple}{
 	\stepcounter{nexemples}
 	\color{gray} \noindent{\it Exemple \thenexemples:}
 }
 
-\newenvironment{exercicefr}{
+\newenvironment{exercice}{
 	\stepcounter{nexercices}
 	\noindent{\bf Exercice \thenexercices.}
 }
 
-\newenvironment{definitionfr}{
+\newenvironment{definition}{
 	\stepcounter{ndefinitions}
 	\noindent {\bf Définition \thendefinitions.}
 }
@@ -36,6 +103,11 @@
 \newenvironment{propriete}{
 	\stepcounter{nproprietes}
 	\noindent {\bf Propriété \thenproprietes.}
+}
+
+\newenvironment{defi}{
+	\stepcounter{ndefis}
+	\noindent {\bf Défi \thendefis.}
 }
 
 \newenvironment{exerciceenum}{
@@ -78,13 +150,13 @@
 }
 
 \newcommand{\exequationpremierdegree}[1]{
-    \begin{exercicefr}
+    \begin{exercice}
         \begin{exerciceenumnoeq}
             \foreach \i in {1,...,#1}{
                 \item \equationpremierdegree
             }
         \end{exerciceenumnoeq}
-    \end{exercicefr}
+    \end{exercice}
 }
 
 \newcommand{\equationproduitnul}{
@@ -96,13 +168,13 @@
 }
 
 \newcommand{\exequationproduitnul}[1]{
-    \begin{exercicefr}
+    \begin{exercice}
         \begin{exerciceenumnoeq}
             \foreach \i in {1,...,#1}{
                 \item \equationproduitnul
             }
         \end{exerciceenumnoeq}
-    \end{exercicefr}
+    \end{exercice}
 }
 
 \newcommand{\fracquestion}[1]{%
@@ -120,3 +192,18 @@
 \newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
 \hspace{-2.5pt}}
 \newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+
+% ----- MATH SYMBOLS -----
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\Ren}{\mathbb{R}^n}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\N}{{\mathbb{N}}}
+
+
+\let\defn=\emph
+\let\epsilon=\varepsilon
+\let\dd=\partial
+\def\endpf{\hfill$\blacksquare$}
+\def\scr#1{{\mathcal{ #1}}}

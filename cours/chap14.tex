@@ -28,10 +28,49 @@ Quelques exemples pour mieux comprendre: \textsc{xvi = x + v + i = 10 + 5 + 1 = 
 
 \subsection{Notation scientifique}
 
-Dans de nombreuses disciplines scientifiques telles que la physique (l'étude des phénomènes naturels de l'univers), la chimie (l'étude de certains types de transformations de la matière impliquant des éléctrons) ou la géologie (l'étude de la Terre), nous avons affaire à de très grands ou très petits nombres. Par exemple, un gogol (10 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000) ou la masse d'un nucléon (0.000 000 000 000 000 000 000 167). La notation décimale devient alors très rapidement encombrante, surtout lors de calculs impliquant plusieurs de ces valeurs. Les mathématiciens ont donc eu l'idée d'utiliser les exposants (que nous avons vu dans le chapitre~\ref{exposants}) afin d'alléger la notation de ces très grands ou très petits nombres. Étant donné l'utilité de cette notation pour les matières scientifiques, ils nommèrent ce système de notation la \textem{notation scientifique}.
+Dans de nombreuses disciplines scientifiques telles que la physique (l'étude des phénomènes naturels de l'univers), la chimie (l'étude de certains types de transformations de la matière impliquant des éléctrons) ou la géologie (l'étude de la Terre), nous avons affaire à de très grands ou très petits nombres. Par exemple, un gogol (10 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000) ou la masse d'un nucléon (0.000 000 000 000 000 000 000 167). La notation décimale devient alors très rapidement encombrante, surtout lors de calculs impliquant plusieurs de ces valeurs. Les mathématiciens ont donc eu l'idée d'utiliser les exposants (que nous avons vu dans le chapitre précédant) afin d'alléger la notation de ces très grands ou très petits nombres. Étant donné l'utilité de cette notation pour les matières scientifiques, ils nommèrent ce système de notation la \emph{notation scientifique}.
 
-Le fonctionnement de la notation scientifique est comme suit. Nous commençons par noter le nombre de 0 dont nous souhaitons
+Voici quelques exemples de notations scientifique et de la notation décimale correspondante.
 
-% TODO: Préfixes
-% nano à giga
-%\section{Préfixes}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|}
+	\hline
+	\textbf{Écriture décimale} & \textbf{Écriture scientifique} \\ \hline
+	\begin{tabular}[c]{@{}c@{}}10 000 000 000 000 000 000 000 000 000 000 000 000 \\ 000 000 000 000 000 000 000 000 000 000 000 000\\  000 000 000 000 000 000 000 000 000\end{tabular} & $10^{100}$ \\ \hline
+	0.000 000 000 000 000 000 000 167 & $1.67 \cdot 10^{-22}$ \\ \hline
+	3 400 & $3.4 \cdot 10^3$ \\ \hline
+	0.007 8 & $7.8 \cdot 10^{-3}$ \\ \hline
+	\end{tabular}
+\end{table}
+
+%Le fonctionnement de la notation scientifique est comme suit. Nous commençons par noter le nombre de 0 qu'il y a soit à droite, soit à gauche de notre nombre (en fonction de là où ils se trouvent). Notons ce nombre $n$. Puis, nous prenons le reste du nombre et nous
+
+\section{Préfixes}
+
+Lorsque nous utilisons des nombres, nous souhaitons souvent quantifier une propriété du monde, tel qu'une distance, du temps ou de la masse. Pour ce faire, nous utilisons des unités telles que le mètre, la seconde ou le kilogramme. Cependant, tout comme dans le cas de la notation scientifique, il nous est utile de pouvoir écrire des grands et petits nombres plus facilement. Pour ce faire, nous pouvons modifier l'unité. Par exemple, lorsque nous mesurons une distance sur une feuille, nous utilisons des centimètres plutôt que des mètres. Voici un tableau de toutes les préfixes que nous pouvons apposer à une unité.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+	\hline
+	\textbf{Préfixe} & \textbf{Symbole} & \textbf{Forme exponentielle} \\ \hline
+	exa & E & $10^{18}$ \\ \hline
+	peta & P & $10^{15}$ \\ \hline
+	tera & T & $10^{12}$ \\ \hline
+	giga & G & $10^{9}$ \\ \hline
+	mega & M & $10^{6}$ \\ \hline
+	kilo & k & $10^{3}$ \\ \hline
+	hecto & h & $10^{2}$ \\ \hline
+	deca & da & $10^{1}$ \\ \hline
+	--- & --- & $10^{0} = 1$ \\ \hline
+	deci & d & $10^{-1}$ \\ \hline
+	centi & c & $10^{-2}$ \\ \hline
+	milli & m & $10^{-3}$ \\ \hline
+	micro & $\mu$ & $10^{-6}$ \\ \hline
+	nano & n & $10^{-9}$ \\ \hline
+	pico & p & $10^{-12}$ \\ \hline
+	femto & f & $10^{-15}$ \\ \hline
+	atto & a & $10^{-18}$ \\ \hline
+	\end{tabular}
+\end{table}
