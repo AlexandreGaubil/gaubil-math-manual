@@ -15,6 +15,8 @@
 %\RequirePackage{glossaries}
 \RequirePackage{bookmark} % To avoid reruning latexmk many times
 
+\let\emph\relax
+\DeclareTextFontCommand{\emph}{\bfseries}
 
 % ----- GRAPHICS ------
 \RequirePackage{tikz}
@@ -56,9 +58,6 @@
 
 \setlength{\parindent}{0em}
 
-\newcommand{\false}{{\it False. }}
-\newcommand{\true}{{\it True. }}
-
 \newcommand{\setsection}[1]{\setcounter{section}{#1}}
 \newcommand{\settheorem}[1]{\setcounter{theorem}{#1}}
 
@@ -66,6 +65,7 @@
 
 \newcounter{ndefinitions}
 \newcounter{nexemples}
+\newcounter{neclairsissements}
 \newcounter{nexercices}
 \newcounter{nastuces}
 \newcounter{nproprietes}
@@ -74,6 +74,7 @@
 \newcommand{\resetcounters}{
     \setcounter{ndefinitions}{0}
     \setcounter{nexemples}{0}
+    \setcounter{neclairsissements}{0}
     \setcounter{nexercices}{0}
     \setcounter{nastuces}{0}
     \setcounter{nproprietes}{0}
@@ -85,15 +86,24 @@
 	\color{gray} \noindent{\it Exemple \thenexemples:}
 }
 
-\newenvironment{exercice}{
-	\stepcounter{nexercices}
-	\noindent{\bf Exercice \thenexercices.}
+\newenvironment{eclairsissement}{
+	\stepcounter{neclairsissements}
+	\color{gray} \noindent{\it Eclairsissement \theneclairsissements:}
 }
 
+\newenvironment{exercice}{
+	\stepcounter{nexercices}
+	\noindent{\it Exercice \thenexercices.}
+}
+
+% FIXME: what happens when two defs are in a row
 \newenvironment{definition}{
 	\stepcounter{ndefinitions}
+    \vspace{1em}
 	\noindent {\bf Définition \thendefinitions.}
-}
+}%{
+  %  \vspace{1em}
+%}
 
 \newenvironment{astuce}{
 	\stepcounter{nastuces}
@@ -102,12 +112,13 @@
 
 \newenvironment{propriete}{
 	\stepcounter{nproprietes}
+    \vspace{1em}
 	\noindent {\bf Propriété \thenproprietes.}
 }
 
 \newenvironment{defi}{
 	\stepcounter{ndefis}
-	\noindent {\bf Défi \thendefis.}
+	\noindent {\it Défi \thendefis.}
 }
 
 \newenvironment{exerciceenum}{
