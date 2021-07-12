@@ -4,10 +4,10 @@
 
 ### Logique
 
-- [] Axiomes
-- [] Qualificatifs (pour tout et il existe)
+- [ ] Axiomes
+- [ ] Qualificatifs (pour tout et il existe)
 - [x] Connecteurs logique (et, ou, négation, implication, equivalence)
-- [] Démonstration
+- [ ] Démonstration
 
 ### Arithmétique
 
@@ -18,13 +18,13 @@
 - [x] Distributivité, factorisation, double distributivité
 - [x] Équation du premier degré
 - [x] Équation produit-nul
-- [] Équation du second degré
+- [ ] Équation du second degré
 
 #### Opérations de base
 
 - [x] Addition, soustraction
 - [x] Multiplication, division
-- [] Exponentiation, racines
+- [ ] Exponentiation, racines
 
 TODO: Le chapitre ``Notation'' devrait-il être dans la partie ``Logique'' ?
 
