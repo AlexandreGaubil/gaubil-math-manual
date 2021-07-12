@@ -1,5 +1,11 @@
 # Manuel de mathématiques pour le collège
 
+## But
+
+Le but de ce manuel est d'offrir une approche **rigoureuse et complète** au programme de collège (sixième à troisième). De nombreux sujets abordés dans ce texte ne sont pas au programme (tel que le chapitre sur les ensembles) mais sont exposés afin de permettre à l'étudiant une compréhension plus rigoureuse des autres sujets (dans le cas du chapitre sur les ensembles, cela nous permet une explication plus rigoureuse de ce qu'une fonction est). Lorsque certains sujets ne peuvent être expliqués rigoureusement (tel que la construction des nombres réels), cela est expliqué à l'étudiant, dans le but de lui faire comprendre qu'il existe des explications sur ces sujets et qu'il suffit de quelques années supplémentaires de travail en mathématique pour qu'il puisse les comprendre.
+
+**ATTENTION**: Pour l'instant, ce manuel est en plein élaboration. Il reste de nombreux sujets non-abordés (listés ci-dessous) ou abordés de manière sommaire.
+
 ## Table des matières
 
 ### Logique
