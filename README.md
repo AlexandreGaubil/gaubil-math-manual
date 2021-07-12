@@ -9,7 +9,6 @@
 - [x] Connecteurs logique (et, ou, négation, implication, equivalence)
 - [ ] Démonstration
 
-
 ### Arithmétique
 
 #### Nombres Relatifs (et rationnels? et premiers?)
