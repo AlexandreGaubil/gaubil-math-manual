@@ -12,3 +12,9 @@
 
 # LaTeX
 *.synctex.gz
+*.aux
+*.fls
+*.log
+*.toc
+*.bfc
+*.bbl
