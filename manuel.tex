@@ -1,29 +1,23 @@
 \documentclass[11pt, oldfontcommands, openany]{memoir}
 \usepackage{coursmath}
-\usepackage{cfr-lm}
-\usepackage{xr}
-
-%\externaldocument[OPERATIONS-]{cours/chap13}
-
-\renewcommand{\afterpartskip}{\relax}
-\nopartblankpage
 
 \title{Manuel de Mathématiques de niveau collège}
 \author{Alexandre Gaubil}
 \date{Dernière mise à jour le \today}
 
-%\input{glossary.tex}
 
 \begin{document}
 
 \selectlanguage{french}
 \maketitle
 
+% The % below are necessary to eliminate any spurious
+% spaces that may get inserted at these points
 
 \foreach \chapternumber in {1,2,...,99} {%
-    \edef\FileName{cours/chap\chapternumber}%             The % here are necessary to eliminate any
-    \edef\FileNameSection{cours/chap\chapternumber-part}% spurious spaces that may get inserted
-    \IfFileExists{\FileNameSection}{%         at these points
+    \edef\FileName{cours/chap\chapternumber}%
+    \edef\FileNameSection{cours/chap\chapternumber-part}%
+    \IfFileExists{\FileNameSection}{%
         \input{\FileNameSection}%
     }%
 
@@ -37,11 +31,10 @@
 \chapter{Exercises}
 
 \foreach \chapternumberi in {0,1,...,99} {%
-    \edef\FileName{exercices/ex\chapternumberi}% The % here are necessary to eliminate any
-    \IfFileExists{\FileName}{%      spurious spaces that may get inserted
-       \input{\FileName}%           at these points
+    \edef\FileName{exercices/ex\chapternumberi}%
+    \IfFileExists{\FileName}{%
+       \input{\FileName}%
     }%
 }%
 
-%\printglossaries
 \end{document}

@@ -12,8 +12,9 @@
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{setspace, fullpage, enumitem, tabularx, lmodern, xcolor}
 \RequirePackage{amsfonts, amssymb, latexsym, amsthm, mathrsfs, amsmath}
-%\RequirePackage{glossaries}
 \RequirePackage{bookmark} % To avoid reruning latexmk many times
+\RequirePackage{cfr-lm}
+\RequirePackage{xr}
 
 \let\emph\relax
 \DeclareTextFontCommand{\emph}{\bfseries}
@@ -52,6 +53,9 @@
   xleftmargin=5.0ex,
   numberstyle=\small\fontfamily{cmtt}\selectfont,
 }
+
+\renewcommand{\afterpartskip}{\relax}
+\nopartblankpage
 
 \RequirePackage{array}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
