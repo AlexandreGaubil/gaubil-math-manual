@@ -8,15 +8,15 @@ La logique est l'étude de {\em relations entre proposition}. Une proposition es
 
 Les connecteurs logiques (le terme formel pour relations) les plus communes sont les suivantes:
 \begin{itemize}
-    \item ``et'' ($\wedge$): ``Minouchette est un chat'' {\bf et} ``les chats ont quatre pattes'';
-    \item ``ou'' ($\vee$): ``il fait jour'' {\bf ou} ``il fait nuit'';
-    \item ``negation'' ($\neg$): la négation de ``Minouchette est un chat'' est ``Minouchette {\bf n}'est pas un chat'';
-    \item ``implication'' ($\implies$): ``Minouchette est un chat'' et ``les chats ont quatre pattes'' {\bf implique} ``Minouchette a quatre pattes'';
-    \item ``equivalence'' ($\iff$): ``il faut jour'' {\bf est équivalent à} ``il ne fait pas nuit''.
+    \item ``et'' ($\wedge$): ``Minouchette est un chat'' \textbf{et} ``les chats ont quatre pattes'';
+    \item ``ou'' ($\vee$): ``il fait jour'' \textbf{ou} ``il fait nuit'';
+    \item ``negation'' ($\neg$): la négation de ``Minouchette est un chat'' est ``Minouchette \textbf{n}'est pas un chat'';
+    \item ``implication'' ($\implies$): ``Minouchette est un chat'' et ``les chats ont quatre pattes'' \textbf{implique} ``Minouchette a quatre pattes'';
+    \item ``equivalence'' ($\iff$): ``il faut jour'' \textbf{est équivalent à} ``il ne fait pas nuit''.
 \end{itemize}
 
 
-% TODO: add more
+% TODO: add more ex
 \begin{exercice}
     Indique les connecteurs logiques dans les propositions suivantes:
     \begin{exerciceenumnoeq}
@@ -34,6 +34,37 @@ Nous avons vu dans la section précédente que la logique est l'étude des relat
     Un autre axiome qui est utilisé en mathématique sont ``tout nombre entier a un successeur (un nombre qui vient après lui)''. Par exemple, nous notons le successeur de 1 $S(1)$ ou 2. De même, nous notons le successeur de 2 $S(2)$, $S(S(1))$ ou 3.
 \end{exemple}
 
+
+
+\section{Language mathématique}
+
+En mathématique, il y a plusieurs manières d'écrire une proposition. Un des but des cours de mathématique au collège et au lycée est d'apprendre une de ces manières qui fut conçut spécifiquement pour écrire des propositions mathématiques. Nous l'appelons le language mathématique. Considérons un exemple afin de mieux comprendre pourquoi nous utilisons ce language par opposition au français et quelles en sont les caractéristiques.
+
+Considérons la proposition suivante, écrite en français: ``le nombre tel que, multiplié par trois et en ajoutant deux à ce résultat, est 8''. Bien que cette phrase soit compréhensible, elle prend beaucoup de place, est longue à lire, peut être la source d'incertitude, etc. Ceci est normal: le français (et tout autre language) ne fut pas créé pour écrire des propositions mathématiques et ne possède pas la rigueur nécessaire pour le faire correctement. Maintenant, réécrivons la proposition en language mathématique: ``$x : 3x+2 = 8$''. Nous savons immédiatement de quoi nous parlons: un nombre $x$. Puis, nous savons que nous ajoutons une condition (le ``$:$'' nous l'indique) qui spécifie de quel $x$ nous parlons. Cette condition prend la forme d'une équation: $3x+2 = 8$. Non seulement cette écriture est plus compacte, elle est aussi plus claire et nous permet de trouver la valeur de $x$ très rapidement en résolvant l'équation ($x = 2$).
+
+\begin{exemple}
+    Ces avantages ne sont pas nécessairement clair au niveau de mathématique que vous possédez. Considérons donc une proposition complexe---il est normal que vous ne la compreniez pas---mais qui indique encore plus clairement les avantage du language mathématique.
+
+    \underline{Définition d'une contraction en français:} Soit un espace métrique avec une fonction de distance définie sur cet espace. Si pour une fonction allant de cet espace à lui-même il existe un nombre réel strictement compris entre zéro et un tel que la distance entre l'image d'un point par cette fonction et d'un deuxième point par cette fonction est inférieure à la distance entre ce point et ce deuxième point multiplié par ce nombre pour tous deux points appartenant à cet espace métrique, nous appelons cette fonction une contraction de cet espace métrique sur lui-même.
+
+    \underline{Définition d'une contraction en language mathématique:} Soit $(X,d)$ un espace métrique. $(\phi \colon X \to X) \wedge (\exists c : 0<c<1) : d(\phi(x), \phi(y)) \leq c\cdot d(x,y) \Rightarrow \phi$ est une contraction de $X$ sur $X$.
+
+    Il devient alors clair que le language mathématique est plus concis et plus clair.
+\end{exemple}
+
+Voici un tableau présentant divers éléments utilisés pour écrire des propositions en language mathématique.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Symbole} & \textbf{Nom} & \textbf{Signification} \\ \hline
+        $\exists \_\_\_$ & il existe & Il existe au moins un \_\_\_ \\ \hline
+        $\exists ! \_\_\_$ & il existe un unique & Il existe exactement un seul \_\_\_ \\ \hline
+        $\forall \_\_\_, ...$ & pour tout & Peut importe la valeur prise par \_\_\_, nous avons... \\ \hline
+        $\_\_\_ : \_\_\_$ & tel que & \_\_\_ est définie de manière que \_\_\_ soit vrai \\ \hline
+    \end{tabular}
+\end{table}
+
 \section{Qualificatifs}
 
-Dans l'exemple \ref{concepts_de_base:axiomes_ex}, nous avons vu que ``tout nombre entier a un successeur''. Il y a deux qualificatifs clés dans cet axiome: ``tout'' et ``a''. Le premier indique que la proposition s'applique à un ensemble de nombres
+Dans l'exemple \ref{concepts_de_base:axiomes_ex}, nous avons vu que ``tout nombre entier a un successeur''. Il y a deux qualificatifs clés dans cet axiome: ``tout'' et ``a''. Le premier indique que la proposition s'applique à un ensemble de nombres au complet. Le deuxième indique l'existence de quelque chose. Ces deux qualificatifs

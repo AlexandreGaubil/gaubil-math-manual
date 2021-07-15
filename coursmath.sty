@@ -4,15 +4,15 @@
 \RequirePackage[french]{babel}
 \RequirePackage[T1]{fontenc}
 
-\RequirePackage{multicol}
+\RequirePackage{multicol, multirow}
 \RequirePackage{float}
 \RequirePackage{booktabs}
-\RequirePackage{textcomp, gensymb, multirow}
+\RequirePackage{textcomp, gensymb}
 \RequirePackage{enumitem}
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{setspace, fullpage, enumitem, tabularx, lmodern, xcolor}
 \RequirePackage{amsfonts, amssymb, latexsym, amsthm, mathrsfs, amsmath}
-\RequirePackage{bookmark} % To avoid reruning latexmk many times
+\RequirePackage{bookmark} % To avoid rerunning latexmk many times
 \RequirePackage{cfr-lm}
 \RequirePackage{xr}
 
@@ -145,7 +145,6 @@
 % Random numbers generator
 \newcommand{\randomint}{\pgfmathparse{floor(rand * 100)} \pgfmathresult}
 \newcommand{\randomfrac}{\pgfmathparse{floor(rand * 1000) / 10} \pgfmathresult}
-
 \newcommand{\randomintpfg}{floor(rand * 100)}
 \newcommand{\randomfracpfg}{floor(rand * 1000) / 10}
 
@@ -199,14 +198,14 @@
 }
 
 
-\newlist{todolist}{itemize}{2}
-\setlist[todolist]{label=$\square$}
-\RequirePackage{pifont}
-\newcommand{\cmark}{\ding{51}}%
-\newcommand{\xmark}{\ding{55}}%
-\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
-\hspace{-2.5pt}}
-\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+%\newlist{todolist}{itemize}{2}
+%\setlist[todolist]{label=$\square$}
+%\RequirePackage{pifont}
+%\newcommand{\cmark}{\ding{51}}%
+%\newcommand{\xmark}{\ding{55}}%
+%\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+%\hspace{-2.5pt}}
+%\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
 
 
 % ----- MATH SYMBOLS -----
@@ -219,6 +218,7 @@
 
 \let\defn=\emph
 \let\epsilon=\varepsilon
+\let\phi=\varphi
 \let\dd=\partial
 \def\endpf{\hfill$\blacksquare$}
 \def\scr#1{{\mathcal{ #1}}}
