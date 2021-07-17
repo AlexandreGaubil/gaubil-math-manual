@@ -55,12 +55,10 @@ Le but de ce manuel est d'offrir une approche **rigoureuse et complète** au pro
 - [ ] Exponentiation (exposants entiers), racines
 - [ ] Définition de la racine carrée ; les carrés parfaits entre 1 et 144.
 
-TODO: Le chapitre ``Notation'' devrait-il être dans la partie ``Logique'' ?
-
 #### Notation
 
 - [x] Les préfixes de nano à giga.
-- [ ] Utiliser diverses représentations d’un même nombre (écriture décimale ou fractionnaire, notation scientifique, repérage sur une droite graduée) ; passer d’une représentation à une autre.
+- [x] Utiliser diverses représentations d’un même nombre (écriture décimale ou fractionnaire, notation scientifique, repérage sur une droite graduée) ; passer d’une représentation à une autre.
 - [ ] Notion de dimension et rapport avec les unités de mesure (m, m2, m3).
 - [ ] Mener des calculs impliquant des grandeurs mesurables, notamment des grandeurs composées, en conservant les unités. Vérifier la cohérence des résultats du point de vue des unités.
 - [ ] Notion de grandeur produit et de grandeur quotient.

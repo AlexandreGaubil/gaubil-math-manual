@@ -13,8 +13,13 @@
 \RequirePackage{setspace, fullpage, enumitem, tabularx, lmodern, xcolor}
 \RequirePackage{amsfonts, amssymb, latexsym, amsthm, mathrsfs, amsmath}
 \RequirePackage{bookmark} % To avoid rerunning latexmk many times
-\RequirePackage{cfr-lm}
+%\RequirePackage{cfr-lm}
 \RequirePackage{xr}
+
+% \renewcommand*\@arabic[1]{\oldstylenums{\number#1}}
+% keep old arabic as Arabic
+% \newcommand*\@Arabic[1]{\number#1}
+% \newcommand*\Arabic[1]{\expandafter\@Arabic\csname c@#1\endcsname}
 
 \let\emph\relax
 \DeclareTextFontCommand{\emph}{\bfseries}
@@ -62,10 +67,18 @@
 
 \setlength{\parindent}{0em}
 
-\newcommand{\setsection}[1]{\setcounter{section}{#1}}
-\newcommand{\settheorem}[1]{\setcounter{theorem}{#1}}
+% \newcommand{\setsection}[1]{\setcounter{section}{#1}}
+% \newcommand{\settheorem}[1]{\setcounter{theorem}{#1}}
 
 \setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
+
+\newenvironment{prerequis}{
+	$\ast\ast\ast$ \textit{Prérequis pour cette partie:}
+}
+{
+    $\ast\ast\ast$
+    \vspace{1em}
+}
 
 \newcounter{ndefinitions}
 \newcounter{nexemples}
@@ -74,6 +87,7 @@
 \newcounter{nastuces}
 \newcounter{nproprietes}
 \newcounter{ndefis}
+\newcounter{solution}
 
 \newcommand{\resetcounters}{
     \setcounter{ndefinitions}{0}
@@ -83,6 +97,7 @@
     \setcounter{nastuces}{0}
     \setcounter{nproprietes}{0}
     \setcounter{ndefis}{0}
+    \setcounter{solution}{0}
 }
 
 \newenvironment{exemple}{
@@ -98,6 +113,18 @@
 \newenvironment{exercice}{
 	\stepcounter{nexercices}
 	\noindent \textit{Exercice \thenexercices.}
+}
+
+\newcommand{\saveSolutionNumber}[1]{
+    \newcounter{#1}
+    \setcounter{#1}{\value{nexercices}}
+}
+\newenvironment{solution}[1]{
+    %\setcounter{solution}{\value{#1}}
+    \noindent Solution \arabic{\value{#1}}
+    %\noindent Solution \thesolution.
+}{
+    \end{solution}
 }
 
 % FIXME: what happens when two defs are in a row
@@ -198,16 +225,6 @@
 }
 
 
-%\newlist{todolist}{itemize}{2}
-%\setlist[todolist]{label=$\square$}
-%\RequirePackage{pifont}
-%\newcommand{\cmark}{\ding{51}}%
-%\newcommand{\xmark}{\ding{55}}%
-%\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
-%\hspace{-2.5pt}}
-%\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
-
-
 % ----- MATH SYMBOLS -----
 \newcommand{\R}{{\mathbb{R}}}
 \newcommand{\Ren}{\mathbb{R}^n}
@@ -215,7 +232,7 @@
 \newcommand{\Z}{{\mathbb{Z}}}
 \newcommand{\N}{{\mathbb{N}}}
 
-
+% TODO: check what this is
 \let\defn=\emph
 \let\epsilon=\varepsilon
 \let\phi=\varphi

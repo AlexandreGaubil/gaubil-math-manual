@@ -1,7 +1,7 @@
 \chapter{Les Nombres Relatifs}
 
 
-\section{Introduction aux nombres relatifs}
+\section{Introduction}
 
 Nous avons vu que nous pouvons créer des nombres de plus en plus grands. Pour le montrer, faisons une démonstration rapide. Supposons qu'il existe un nombre qui soit le plus grand nombre possible. Prenons ensuite ce nombre plus 1. Nous savons que ce nouveau nombre est plus grand que le nombre qui était supposé être le plus grand possible, ce qui ne fait pas de sens. On peux toujours créer des nombres de plus en plus grand. Cependant, nous ne pouvons pas faire l'inverse. Nous ne connaissons (pour l'instant du moins) aucun nombre plus petit que 0.
 
@@ -10,7 +10,10 @@ Nous avons vu que nous pouvons créer des nombres de plus en plus grands. Pour l
 		\foreach \x in {0,1,2,3}
    		\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
 
-		\draw[thick,->] node[anchor=east, align= left] at (-5,0) {\textcolor{gray}{et ici?}} (-4,0) -- (4,0)  node[anchor=west, text width = 100] {nombre de plus en plus grand} ;
+		\draw[thick,->]
+			node[anchor = east, align = right, text width = 80] at (-5,0) {\textcolor{gray}{\hfill et ici?}}
+			(-4,0) -- (4,0)
+			node[anchor=west, text width = 80] at (5,0) {nombres de plus en plus grand} ;
 	\end{tikzpicture}
 \end{center}
 
@@ -21,7 +24,12 @@ Nous avons vu que nous pouvons créer des nombres de plus en plus grands. Pour l
 		\foreach \x in {-3,-2,-1,0,1,2,3}
    		\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north] {$\x$};
 
-		\draw[thick,<->] node[anchor=east, align = left, text width = 90] at (-5,0) {nombre de plus en plus petit} node[anchor=center, align = left] at (-2,-1) {nombres négatifs} (-4,0) -- (4,0) node[anchor=center, align = left] at (2,-1) {nombres positifs} node[anchor=west, text width = 90] {nombre de plus en plus grand} ;
+		\draw[thick,<->]
+			node[anchor=east, align = right, text width = 80] at (-5,0) {nombres de plus en plus petit}
+			node[anchor=center, align = right] at (-2,-1) {nombres négatifs}
+			(-4,0) -- (4,0)
+			node[anchor=center, align = left] at (2,-1) {nombres positifs}
+			node[anchor=west, text width = 80] at (5,0) {nombres de plus en plus grand} ;
 	\end{tikzpicture}
 \end{center}
 
