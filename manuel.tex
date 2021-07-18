@@ -15,6 +15,11 @@
 
 \tableofcontents{}
 
+\edef\FileIntro{cours/intro}%
+\IfFileExists{\FileIntro}{%
+    \input{\FileIntro}%
+}%
+
 % The % below are necessary to eliminate any spurious
 % spaces that may get inserted at these points
 
