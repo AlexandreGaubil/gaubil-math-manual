@@ -19,6 +19,8 @@ Les connecteurs logiques (le terme formel pour relations) les plus communs sont 
     \item ``\textbf{equivalence}'' ($\iff$): ``il fait jour'' \textit{est équivalent à} ``il ne fait pas nuit''.
 \end{itemize}
 
+\vspace{1em}
+
 \begin{exercice}
     Indique les connecteurs logiques dans les propositions suivantes:
     \begin{exerciceenumnoeq}
@@ -42,6 +44,8 @@ Nous avons vu dans la section précédente que la logique est l'étude des relat
 
 Le fait que la somme des angles d'un triangle fait 180\textdegree, par exemple, n'est pas une vérité axiomatique. En effet, nous ne le prenons pas comme étant vrai sans le démontrer. Au contraire, c'est une propriété que nous démontrons. Le fait qu'un triangle a trois sommets, cependant, est une vérité axiomatique. En effet, nous définissons un triangle comme étant une figure avec trois sommets. Ce n'est pas quelque chose que nous pouvons démontrer, nous le prenons pour vrai.
 
+\vspace{1em}
+
 \begin{exercice}
     Quelles propositions parmi les suivantes sont susceptibles d'être des vérités axiomatiques?
     \begin{enumerate}
@@ -54,9 +58,16 @@ Le fait que la somme des angles d'un triangle fait 180\textdegree, par exemple, 
 
 Nous avons vu dans la section précédente que nous devons démontrer les théorèmes ou propositions que nous utilisons afin de nous assurer de leur véracité. Nous devons donc apprendre comment une démonstration est structurée.
 
-Avant d'entamer une démonstration, il nous faut savoir deux choses: ce que nous cherchons à démontrer et ce que nous pouvons présumer. Par exemple, si nous voulons démontrer la propriété que
+Avant d'entamer une démonstration, il nous faut savoir deux choses: ce que nous cherchons à démontrer et ce que nous pouvons présumer. Par exemple, si nous voulons démontrer la propriété que pour tout nombre entier $x$, $2x + 1$ n'est pas un nombre pair, notre point de départ est simplement un nombre $x$ quelconque et nous voulons montrer que $2x + 1$ n'est pas un nombre pair.
 
+Puis, dans la démonstration, nous cherchons à faire une succession de relations entre propositions (en partant de la proposition $x$) pour arriver à la proposition ``$2x+1$ n'est pas pair''. Voici un exemple sur comment rédiger cette démonstration:
+\begin{proof}
+    \hfill
+    \begin{itemize}
+        \item Soit $x$ un nombre entier. \texttt{[Supposition]}
+        \item Cela implique que $2x$ est pair, par définition de ce qu'est un nombre pair.
+        \item Donc $2x+1$ n'est pas pair, puisque le nombre qui suit un nombre pair est un nombre impair. \texttt{[Conclusion]} \qedhere
+    \end{itemize}
+\end{proof}
 
-%\section{Qualificatifs}
-
-%Dans l'exemple \ref{concepts_de_base:axiomes_ex}, nous avons vu que ``tout nombre entier a un successeur''. Il y a deux qualificatifs clés dans cet axiome: ``tout'' et ``a''. Le premier indique que la proposition s'applique à un ensemble de nombres au complet. Le deuxième indique l'existence de quelque chose. Ces deux qualificatifs
+Il est important, lorsqu'on rédige une démonstration que les étapes du raisonnement soit clairement expliquées et que les raisons de la validité de ces différentes successions le soit également.
