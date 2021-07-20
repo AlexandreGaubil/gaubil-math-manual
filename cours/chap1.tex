@@ -1,22 +1,24 @@
 \chapter{Fondements de la mathématique}
 
-La mathématique est un ensemble de concepts. Pour pouvoir comprendre la mathématique, il est important d'être familier avec certains concepts auparavant. Ces concepts nous permettrons de mieux comprendre les idées sous-jacentes de la mathématique---autrement dit, nous pourrons mieux comprendre pourquoi nous faisons certaines choses d'une certaine manière et non pas d'une autre.
+La mathématique est un ensemble de concepts. Pour pouvoir comprendre la mathématique, il est important d'être familier avec certains concepts auparavant. Ceci nous permettra de mieux comprendre les idées sous-jacentes de la mathématique---autrement dit, pourquoi nous faisons certaines choses d'une certaine manière.
 
 \section{Logique}
 
-La logique est l'étude de {\em relations entre proposition}. Une proposition est une idée qui peut être vraie, fausse, ou indéterminée (dont on ne sait pas si elle est vraie ou fausse). Par exemple, ``un triangle a trois sommets'' est une proposition qui est vraie, ``un chat a cinq pattes'' est une proposition qui est fausse et ``il fait soleil'' est une proposition indéterminée---nous ne savons pas à priori s'il fait soleil ou non. Nous pouvons établir des relations entre propositions. Par exemple, nous pouvons établir une relation d'implication (une chose entraîne ou implique une autre) entre les trois propositions suivantes: ``Minouchette est un chat'' et ``les chats ont quatre pattes'' implique ``Minouchette a quatre pattes''. En effet, si Minouchette est un chat et les chats ont quatre pattes, nous pouvons en déduire que Minouchette doit avoir quatre pattes.
+La logique est l'étude de \textit{relations entre proposition}. Une proposition est une idée qui peut être vraie, fausse, ou indéterminée (dont on ne sait pas si elle est vraie ou fausse). Par exemple, ``un triangle a trois sommets'' est une proposition qui est vraie, ``un chat possède cinq pattes'' est une proposition qui est fausse et ``il fait soleil'' est une proposition indéterminée---nous ne savons pas à priori s'il fait soleil ou non. Nous pouvons établir des relations entre propositions. Par exemple, nous pouvons établir une relation d'implication (une chose entraîne ou implique une autre) entre les trois propositions suivantes: ``Minouchette est un chat'' et ``les chats ont quatre pattes'' implique ``Minouchette a quatre pattes''. En effet, si Minouchette est un chat et les chats ont quatre pattes, nous pouvons en déduire que Minouchette doit avoir quatre pattes.
 
-Les connecteurs logiques (le terme formel pour relations) les plus communes sont les suivantes:
+\begin{definition}
+    Une \emph{proposition} est une idée qui peut être vraie, fausse, ou indéterminée.
+\end{definition}
+
+Les connecteurs logiques (le terme formel pour relations) les plus communs sont les suivants:
 \begin{itemize}
-    \item ``et'' ($\wedge$): ``Minouchette est un chat'' \textbf{et} ``les chats ont quatre pattes'';
-    \item ``ou'' ($\vee$): ``il fait jour'' \textbf{ou} ``il fait nuit'';
-    \item ``negation'' ($\neg$): la négation de ``Minouchette est un chat'' est ``Minouchette \textbf{n}'est pas un chat'';
-    \item ``implication'' ($\implies$): ``Minouchette est un chat'' et ``les chats ont quatre pattes'' \textbf{implique} ``Minouchette a quatre pattes'';
-    \item ``equivalence'' ($\iff$): ``il faut jour'' \textbf{est équivalent à} ``il ne fait pas nuit''.
+    \item ``\textbf{et}'' ($\wedge$): ``Minouchette est un chat'' \textit{et} ``les chats ont quatre pattes'';
+    \item ``\textbf{ou}'' ($\vee$): ``il fait jour'' \textit{ou} ``il fait nuit'';
+    \item ``\textbf{negation}'' ($\neg$): la négation de ``Minouchette est un chat'' est ``Minouchette \textit{n}'est pas un chat'';
+    \item ``\textbf{implication}'' ($\implies$): ``Minouchette est un chat'' et ``les chats ont quatre pattes'' \textit{implique} ``Minouchette a quatre pattes'';
+    \item ``\textbf{equivalence}'' ($\iff$): ``il fait jour'' \textit{est équivalent à} ``il ne fait pas nuit''.
 \end{itemize}
 
-
-% TODO: add more ex
 \begin{exercice}
     Indique les connecteurs logiques dans les propositions suivantes:
     \begin{exerciceenumnoeq}
@@ -28,11 +30,31 @@ Les connecteurs logiques (le terme formel pour relations) les plus communes sont
 
 \section{Axiomes}
 
-Nous avons vu dans la section précédente que la logique est l'étude des relations entre propositions. En mathématique, nous prenons certaines propositions comme étant vraie (par exemple, nous considérons comme vrai le fait que 1 est un nombre entier). Nous appelons ces propositions que nous prenons comme vraie des {\em axiomes}. Il est important de noter que nous ne pouvons pas démontrer ces axiomes. Nous ne pouvons pas montrer que 1 est un nombre entier. Plutôt, nous le déclarons comme étant vrai. Pour certaines de ces vérités moins importantes, nous ne les appelons pas axiomes mais définitions. Ensuite, nous utilisons ces axiomes et definitions pour démontrer à l'aide d'une succession de relations entre propositions de nouvelles vérités que nous appelons théorèmes, lemmes, propositions, etc.
+Nous avons vu dans la section précédente que la logique est l'étude des relations entre propositions. En mathématique, nous prenons certaines propositions comme étant vraie (par exemple, nous considérons comme vrai le fait que 1 est un nombre entier). Nous appelons ces propositions que nous prenons comme vraie des {\em axiomes}. Il est important de noter que nous ne pouvons pas démontrer ces axiomes. Nous ne pouvons pas montrer que 1 est un nombre entier. Plutôt, nous le déclarons comme étant vrai. Certaines de ces propositions que nous prenons comme étant vraie sont aussi appelées définitions. Un autre terme utilisé pour décrire ce type de proposition est celui de \textbf{vérité axiomatique}. Ensuite, nous utilisons ces axiomes et définitions pour démontrer à l'aide d'une succession de relations entre propositions de nouvelles vérités que nous appelons théorèmes, lemmes, propositions, etc.
 
 \begin{exemple}\label{concepts_de_base:axiomes_ex}
     Un autre axiome qui est utilisé en mathématique sont ``tout nombre entier a un successeur (un nombre qui vient après lui)''. Par exemple, nous notons le successeur de 1 $S(1)$ ou 2. De même, nous notons le successeur de 2 $S(2)$, $S(S(1))$ ou 3.
 \end{exemple}
+
+\begin{pourallerplusloin}
+    Au premier abord, il peut sembler curieux que nous disions que certaines propositions sont indéterminées. En effet, il pourrait sembler vrai que toute proposition peut être déterminée. Le fait que nous n'ayons pas été en mesure de démontrer que quelque chose est vrai ou non signifierait simplement que nous n'avons pas encore trouvé la ``solution''. De nombreux mathématiciens pensaient la même chose, jusqu'à ce qu'un mathématicien nommé \href{https://fr.wikipedia.org/wiki/Kurt_Gödel}{Gödel} démontre son théorème d'incomplétude. Ce théorème (qui lui, est démontré et que donc nous savons est vrai) affirme que tout système axiomatique laissera nécessairement des propositions qui ne peuvent être infirmées (démontrées comme étant fausses) ou confirmées (démontrées comme étant vraies). Il existe donc des propositions (trop complexes pour que nous puissions les exposer ici sans plusieurs pages d'explications) que nous savons sont indéterminées.
+\end{pourallerplusloin}
+
+Le fait que la somme des angles d'un triangle fait 180\textdegree, par exemple, n'est pas une vérité axiomatique. En effet, nous ne le prenons pas comme étant vrai sans le démontrer. Au contraire, c'est une propriété que nous démontrons. Le fait qu'un triangle a trois sommets, cependant, est une vérité axiomatique. En effet, nous définissons un triangle comme étant une figure avec trois sommets. Ce n'est pas quelque chose que nous pouvons démontrer, nous le prenons pour vrai.
+
+\begin{exercice}
+    Quelles propositions parmi les suivantes sont susceptibles d'être des vérités axiomatiques?
+    \begin{enumerate}
+        \item 0 est tel que pour tout nombre $a$, nous avons $a+0 = a$.
+        \item Pour tout nombre naturel (nombre entier et positif) $n$, il existe un nombre entier $k$ tel que $n^p - 1 = n\cdot k$.
+    \end{enumerate}
+\end{exercice}
+
+\section{Démonstrations}
+
+Nous avons vu dans la section précédente que nous devons démontrer les théorèmes ou propositions que nous utilisons afin de nous assurer de leur véracité. Nous devons donc apprendre comment une démonstration est structurée.
+
+Avant d'entamer une démonstration, il nous faut savoir deux choses: ce que nous cherchons à démontrer et ce que nous pouvons présumer. Par exemple, si nous voulons démontrer la propriété que
 
 
 %\section{Qualificatifs}

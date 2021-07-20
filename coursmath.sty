@@ -15,6 +15,7 @@
 \RequirePackage{bookmark} % To avoid rerunning latexmk many times
 %\RequirePackage{cfr-lm}
 \RequirePackage{xr}
+\RequirePackage{textcomp}
 
 % \renewcommand*\@arabic[1]{\oldstylenums{\number#1}}
 % keep old arabic as Arabic
@@ -150,6 +151,14 @@
 \newenvironment{defi}{
 	\stepcounter{ndefis}
 	\noindent \textit{Défi \thendefis.}
+}
+
+\newenvironment{pourallerplusloin}{
+    \vspace{1em}
+    \color{gray}
+	\noindent \textit{Pour aller plus loin.}
+}{
+    \vspace{1em}
 }
 
 \newenvironment{exerciceenum}{
