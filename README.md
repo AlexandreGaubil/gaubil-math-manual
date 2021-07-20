@@ -11,9 +11,9 @@ Le but de ce manuel est d'offrir une approche **rigoureuse et complète** au pro
 ### Logique
 
 - [x] Axiomes
-- [ ] Qualificatifs (pour tout et il existe)
+- [x] Qualificatifs (pour tout et il existe)
 - [x] Connecteurs logique (et, ou, négation, implication, equivalence)
-- [ ] Démonstration
+- [x] Démonstration
 
 ### Arithmétique
 
