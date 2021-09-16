@@ -105,3 +105,67 @@ Quel type de produit donne 0? Lorsque nous avons un produit de plusieurs nombres
 \end{propriete}
 
 \section{Équation du second degré}
+
+\begin{prerequis}
+    \textit{Exposants}
+\end{prerequis}
+
+Jusqu'à présent, dans les équations que nous avons étudiées, les inconnues étaient toutes soit au premier degré, soit organisé sous la forme d'une équation produit-nul. Dans cette section, nous allons étudier les équations où les inconnues ont un exposant de degré deux.
+
+\begin{definition}
+    Une \emph{équation du second degré} est une équation qui peut être écrite sous la forme suivante: $ax^2 + bx + c = 0$, avec $a,b,c\in \R$, $a\not=0$ et $x$ étant une inconnue.
+\end{definition}
+
+\begin{exemple}
+    \begin{itemize}
+        \item $3x^2 + 8x -9 = 0$ est une équation du second degré;
+        \item $4.6 x^2 = 7x + 1$ est équivalent à $4.6x^2 - 7x - 1 = 0$, donc c'est une équation du second degré;
+        \item $6x - 7 = 0$ n'est pas une équation du second degré ($a = 0$ dans cet exemple);
+        \item $6x^3 = 8$ n'est pas une équation du second degré (l'exposant le plus important est supérieur à deux).
+    \end{itemize}
+\end{exemple}
+
+\begin{exercice}
+    Détermine quelles sont les équations du second degré parmi les équations suivantes.
+    \begin{enumerate}
+        \item $7x^2 = 9x - 9$
+        \item $6x^{1.5} + 9x + 6 =0$
+        \item $\pi x^2 + 9x = 0$
+        \item $9x = 8$
+    \end{enumerate}
+\end{exercice}
+
+\subsection{Méthode du discriminant}
+
+Pour résoudre une équation du second degré, il nous faut la propriété suivante.
+
+\begin{definition}
+    Soit une équation du second degré de la forme $ax^2 + bx + c = 0$. Nous définissons le \emph{discriminant} (noté $\Delta$) de cette équation comme étant le résultat suivant:
+    \[
+        \Delta = b^2 - 4ac.
+    \]
+\end{definition}
+
+\begin{exemple}
+    Pour l'équation $8x^2 + 5x - 2 = 0$, le discriminant est $\Delta = 5^2 - 4\cdot 8 \cdot 2 = 25 - 64 = -39$.
+\end{exemple}
+
+\begin{exercice}
+    Détermine le discriminant des équations suivantes:
+    \begin{enumerate}
+        \item
+    \end{enumerate}
+\end{exercice}
+
+\begin{propriete}
+    Soit une équation du second degré de la forme $ax^2 + bx + c = 0$. Si $\Delta \geq 0$, les solutions de cette équation sont
+    \[
+        x_1 = \frac{-b + \sqrt{\Delta}}{2a} \ \ \ \ x_2 = \frac{-b - \sqrt{\Delta}}{2a}
+    \]
+    ou noté plus simplement ($\pm$ étant lu plus ou moins, signifiant qu'il peut être remplacé soit par un plus, soit par un moins)
+    \[
+        x = \frac{-b \pm \sqrt{\Delta}}{2a}.
+    \]
+
+    Si $\Delta < 0$, cette équation n'admet pas de solution.
+\end{propriete}
